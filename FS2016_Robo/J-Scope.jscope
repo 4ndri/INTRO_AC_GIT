@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<JScopeProject>
+    <FileVersion major="1" minor="1" />
+    <Project>
+        <Configuration>
+            <JLink>
+                <Options IsRTTSession="0" IsRTTWithTimeStamp="1" SamplingPeriod="20000" Connection="1" SerialNo="0" IP="" TargetDevice="MK22FX512xxx12" TargetInterface="SWD" InterfaceSpeed="4000" />
+            </JLink>
+            <ElfFile Name="C:\Users\Erich Styger\Data\HSLU\Vorlesung\INTRO_FS2016\git\INTRO_FS2016\Projects\Styger\FS2016_Robo\Debug\FS2016_Robo.elf" />
+            <DataFile Name="" />
+            <RawFile Name="" />
+            <Scope>
+                <Options TimeResolutionUs="1000000" />
+            </Scope>
+        </Configuration>
+        <Windows>
+            <Graph Show="1" />
+            <Watch Show="1" />
+        </Windows>
+        <SelectedSymbols>
+            <Symbol>
+                <Options Name="TACHO_currLeftSpeed" Address="0x1FFF828C" Type="long" TypeID="12" Size="4" GraphColorRed="255" GraphColorGreen="215" GraphColorBlue="0" YMinSampled="0" YMaxSampled="0" YAvgSampled="0" Offset="4" ShowInGraph="1" YOffset="200" IsAutoConfig="0" YResolution="500" MaxValue="2000" File="C:/Users/Erich Styger/Data/HSLU/Vorlesung/INTRO_FS2016/git/INTRO_FS2016/Projects/Styger/FS2016_Common/Tacho.c" Scope="1" DrawStyle="0" />
+            </Symbol>
+            <Symbol>
+                <Options Name="TACHO_currRightSpeed" Address="0x1FFF8290" Type="long" TypeID="12" Size="4" GraphColorRed="0" GraphColorGreen="255" GraphColorBlue="0" YMinSampled="0" YMaxSampled="0" YAvgSampled="0" Offset="8" ShowInGraph="1" YOffset="200" IsAutoConfig="0" YResolution="500" MaxValue="1000" File="C:/Users/Erich Styger/Data/HSLU/Vorlesung/INTRO_FS2016/git/INTRO_FS2016/Projects/Styger/FS2016_Common/Tacho.c" Scope="1" DrawStyle="0" />
+            </Symbol>
+        </SelectedSymbols>
+    </Project>
+</JScopeProject>
