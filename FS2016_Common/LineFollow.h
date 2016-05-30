@@ -25,6 +25,8 @@ bool LF_IsFollowing(void);
 void LF_Init(void);
 void LF_Deinit(void);
 
+void LF_SetIsLeftHandRule(bool newRule);
+
 #endif /* PL_CONFIG_HAS_LINE_FOLLOW */
 
 #endif /* LINEFOLLOW_H_ */

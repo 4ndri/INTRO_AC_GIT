@@ -36,6 +36,19 @@
   #include "Shell.h"
 #endif
 
+#if PL_CONFIG_HAS_BUZZER
+	#include "Buzzer.h"
+#endif
+#if PL_CONFIG_HAS_LINE_FOLLOW
+	#include "LineFollow.h"
+#endif
+#if PL_CONFIG_HAS_REFLECTANCE
+	#include "Reflectance.h"
+#endif
+#if PL_CONFIG_HAS_LINE_MAZE
+	#include "Maze.h"
+#endif
+
 static bool REMOTE_isOn = FALSE;
 static bool REMOTE_isVerbose = FALSE;
 static bool REMOTE_useJoystick = TRUE;
@@ -290,9 +303,17 @@ uint8_t REMOTE_HandleRemoteRxMessage(RAPP_MSG_Type type, uint8_t size, uint8_t *
         DRV_SetMode(DRV_MODE_SPEED);
         SHELL_SendString("Remote ON\r\n");
       } else if (val=='C') { /* red 'C' button */
-        /*! \todo add functionality */
+
+		#if PL_CONFIG_HAS_REFLECTANCE
+    	  REF_CalibrateStartStop();
+		#endif
       } else if (val=='A') { /* green 'A' button */
-        /*! \todo add functionality */
+
+    	  SHELL_SendString("Button A pressed\r\n");
+		#if PL_CONFIG_HAS_LINE_MAZE
+    	  LF_StartStopFollowing();
+
+		#endif
       }
 #else
       *handled = FALSE; /* no shell and no buzzer? */
